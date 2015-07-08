@@ -4,7 +4,7 @@ Browserify transform for (node-config)[https://github.com/lorenwest/node-config]
 ### Example
 **Gruntfile.js** (alternatively, you can put the transform into your `package.json` file)
 ```js
-var configify = require('node-configify');
+var configify = require('config-browserify');
 // ...
 {
     // ...
