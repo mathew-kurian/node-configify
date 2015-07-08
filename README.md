@@ -1,4 +1,4 @@
-# Config (browserify)
+# Configify
 Browserify transform for [node-config](https://github.com/lorenwest/node-config) library
 
 ### Install
