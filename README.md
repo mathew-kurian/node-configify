@@ -33,4 +33,5 @@ global.window && console.log(config.get('Client.testProperty')); // prints `hell
 ```
 
 #### Important 
-For security purposes, only the `Client` level config properties can be accessible from client-side code (which is bundled by browserify)
+- For security purposes, only the `Client` level config properties can be accessible from client-side code (which is bundled by browserify)
+- There is no support for `watchify` at the moment. The entire app must be restarted in order to get config properties which were modified since the server started.
