@@ -1,5 +1,5 @@
 {
-  "name": "configify",
+  "name": "config-browserify",
   "version": "1.0.0",
   "dependencies": {
     "falafel": "^1.1.0",
