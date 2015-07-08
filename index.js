@@ -1,14 +1,12 @@
 var through = require('through2');
 var falafel = require('falafel');
-var path = require('path');
-var fs = require('fs');
-var config = require('config');
+var config = require('config'); // FIXME hard reload this each time in order to support `watchify`
 var util = require('util');
 
 module.exports = function (file) {
     if (!/\.(js|jsx|coffee)$/.test(file)) return through();
 
-    var data = ''
+    var data = '';
     var modified = false;
 
     return through(function write(chunk, enc, next) {
@@ -25,6 +23,7 @@ module.exports = function (file) {
                     node.parent.update(util.format('(%s)(%s);', function (props) {
                         var self = this;
                         var _getByPropPath = function (o, s) {
+                            // http://stackoverflow.com/a/6491621
                             s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
                             s = s.replace(/^\./, '');           // strip a leading dot
                             var a = s.split('.');
@@ -52,4 +51,4 @@ module.exports = function (file) {
         this.push(null);
         done();
     });
-}
+};

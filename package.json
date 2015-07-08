@@ -2,7 +2,6 @@
   "name": "configify",
   "version": "1.0.0",
   "dependencies": {
-    "browserify": "^10.2.4",
     "falafel": "^1.1.0",
     "through2": "^2.0.0"
   },
