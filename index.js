@@ -23,6 +23,7 @@ module.exports = function (file) {
                 node.parent.arguments[0].value === 'config') {
                 if (node.parent.parent.type === 'VariableDeclarator') {
                     node.parent.update(util.format('(%s)(%s);', function (props) {
+                        var self = this;
                         var _getByPropPath = function (o, s) {
                             s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
                             s = s.replace(/^\./, '');           // strip a leading dot
@@ -36,13 +37,13 @@ module.exports = function (file) {
                                 }
                             }
                             return o;
-                        }
+                        };
 
-                        this.get = function (a) {
+                        self.get = function (a) {
                             return _getByPropPath(props, a);
-                        }
+                        };
 
-                        return this;
+                        return self;
                     }.toString(), JSON.stringify({Client: config.get('Client')})));
                     modified = true;
                 }

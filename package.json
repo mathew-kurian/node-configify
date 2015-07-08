@@ -6,7 +6,7 @@
     "falafel": "^1.1.0",
     "through2": "^2.0.0"
   },
-  "description": "Transform node-config into browserify static statements ",
+  "description": "Browserify transform for node-config (aka. config) library",
   "main": "index.js",
   "devDependencies": {},
   "author": "Mathew Kurian",
