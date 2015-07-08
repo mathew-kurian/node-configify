@@ -1,8 +1,14 @@
 # Configify
-Browserify transform for (node-config)[https://github.com/lorenwest/node-config] library
+Browserify transform for [node-config](https://github.com/lorenwest/node-config) library
+
+### Install
+```
+npm install config-browserify
+```
 
 ### Example
-**Gruntfile.js** (alternatively, you can put the transform into your `package.json` file)
+### Setup (via Grunt OR package.json)
+**Gruntfile.js**
 ```js
 var configify = require('config-browserify');
 // ...
@@ -16,7 +22,17 @@ var configify = require('config-browserify');
 	// ...
 }
 ```
+**package.json**
+```js
+{
+  "name": "mymodule",
+  "browserify": {
+    "transform": "config-browserify"
+  }
+}
+```
 
+### Usage
 **ClientSide.js** (which will be bundled by browserify)
 ```js
 var config = require('config');
@@ -34,4 +50,4 @@ global.window && console.log(config.get('Client.testProperty')); // prints `hell
 
 #### Important 
 - For security purposes, only the `Client` level config properties can be accessible from client-side code (which is bundled by browserify)
-- There is no support for `watchify` at the moment. The entire app must be restarted in order to get config properties which were modified since the server started.
+- For support for server-side rendering frameworks, there is no support for `watchify` at the moment. The entire app must be restarted in order to get config properties which were modified since the server started.

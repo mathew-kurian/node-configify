@@ -1,6 +1,6 @@
 {
   "name": "config-browserify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "dependencies": {
     "falafel": "^1.1.0",
     "through2": "^2.0.0"
