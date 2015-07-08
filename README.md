@@ -1,5 +1,5 @@
 # Configify
-Browserify transform for node-config (aka. config) library
+Browserify transform for (node-config)[https://github.com/lorenwest/node-config] library
 
 ### Example
 **Gruntfile.js** (alternatively, you can put the transform into your `package.json` file)
