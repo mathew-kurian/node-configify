@@ -21,7 +21,7 @@ module.exports = function (file) {
                 node.parent.arguments[0].value === 'config') {
                 if (node.parent.parent.type === 'VariableDeclarator') {
                     node.parent.update(util.format('(%s)(%s);', function (props) {
-                        var self = this;
+                        var self = {};
                         var _getByPropPath = function (o, s) {
                             // http://stackoverflow.com/a/6491621
                             s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
