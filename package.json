@@ -9,6 +9,7 @@
   "description": "Browserify transform for node-config (aka. config) library",
   "main": "index.js",
   "devDependencies": {},
+  "repository": "bluejamesbond/node-configify",
   "author": "Mathew Kurian",
   "license": "ISC"
 }
