@@ -3,7 +3,7 @@
   "version": "1.0.5",
   "dependencies": {
     "config": "^1.14.0",
-    "falafel": "^1.1.0",
+    "falafel": "^2.0.0",
     "through2": "^2.0.0"
   },
   "description": "Browserify transform for node-config (aka. config) library",
